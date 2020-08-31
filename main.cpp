@@ -27,14 +27,14 @@ int main(int argc, char* argv[]) {
 
     cout << "Valor de bbb*ccc: " << P << endl << endl;
 	
-	//Criacao das threads
+    //Criacao das threads
     thread t1(chamaProgramaPrimos1);
     thread t2(chamaProgramaPrimos2);
     //Chamando as threads
     t1.join();
     t2.join();
 
-	cout << "Somatoria dos numeros primos: " << somatoria;
+    cout << "Somatoria dos numeros primos: " << somatoria;
 	
 	
 	
@@ -60,7 +60,7 @@ void chamaProgramaPrimos2() {
         while (contaPrimos < aaa) {
             if (TestaPrimo3(nAtual)) {
                 if(nAtual != 2)
-				somatoria += nAtual;
+		somatoria += nAtual;
                 contaPrimos++;
                 //cout << "Numero primo " << contaPrimos << ": " << nAtual << endl;
        			}
@@ -70,7 +70,7 @@ void chamaProgramaPrimos2() {
         }
     
 
-//Funcao que verifica se o numero é primo, algoritmo cedido pelo professor
+//Funcao que verifica se o numero Ã© primo, algoritmo cedido pelo professor
 int TestaPrimo3(int n) {
     int EhPrimo,
         d = 3;
@@ -82,7 +82,7 @@ int TestaPrimo3(int n) {
     while (EhPrimo && d <= n / 2) {
         if (n % d == 0)
             EhPrimo = 0;
-        d = d + 2;        /* testar apenas ímpares*/
+        d = d + 2;        /* testar apenas Ã­mpares*/
     }
     return EhPrimo;
 }
